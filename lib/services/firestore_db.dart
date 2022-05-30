@@ -7,16 +7,16 @@ class DatabaseService {
   final CollectionReference patientsCollection = FirebaseFirestore.instance.collection("patients");
 
   Future addNewPatient(
-  {
-    required String name,
-    required DateTime dateOfBirth,
-    required String address,
-    required String mobileNumber,
-    required String details
-}
+      {
+        required String name,
+        required DateTime dateOfBirth,
+        required String address,
+        required String mobileNumber,
+        required String details
+      }
       ) async {
     try {
-     await patientsCollection.add({
+      await patientsCollection.add({
         "Name" : name,
         "DateOfBirth" : dateOfBirth,
         "Address" : address,
